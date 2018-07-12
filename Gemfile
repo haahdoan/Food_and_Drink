@@ -15,6 +15,9 @@ gem "bootsnap", ">= 1.1.0", require: false
 gem "rubocop", require: false
 gem "bootstrap"
 gem "jquery-rails"
+gem "faker", "~> 1.7.3"
+gem "kaminari"
+gem "paperclip", "~> 6.0.0"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
