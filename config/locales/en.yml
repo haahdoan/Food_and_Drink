@@ -114,3 +114,10 @@ en:
       notice: "Updated!"
     destroy:
       notice: "Delete failed!"
+  feedbacks:
+    new:
+      title: "Feedback"
+      send: "Send"
+    create:
+      success: "Thanks for your feedback!"
+      fail: "Your feedback failed, please resubmit!"
