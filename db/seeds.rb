@@ -31,3 +31,9 @@ end
     category_id: category_id
   )
 end
+
+User.create!(
+  name: "admin",
+  email: "admin@gmail.com",
+  password: "123123"
+)

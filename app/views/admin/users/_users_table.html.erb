@@ -1,22 +1,19 @@
-<table class="table">
-  <thead class="thead-dark">
+<table class="table table-hover">
+  <tr class="table-secondary">
+    <th><%= t ".id" %></th>
+    <th><%= t ".name" %></th>
+    <th><%= t ".email" %></th>
+    <th><%= t ".address" %></th>
+    <th></th>
+  </tr>
+  <% @user.each do |user| %>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col"><%= t ".name" %></th>
-      <th scope="col"><%= t ".email" %></th>
-      <th scope="col"><%= t ".address" %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @user.each do |user| %>
-    <tr>
-      <th scope="row">1</th>
+      <td><%= user.id %></td>
       <td><%= user.name %></td>
       <td><%= user.email %></td>
       <td><%= user.address %></td>
       <td><%= link_to  t(".delete"), admin_user_path(user),
         method: :delete, data: {confirm: t(".confirm")} %></td>
     </tr>
-    <% end %>
-  </tbody>
+  <% end %>
 </table>

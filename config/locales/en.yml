@@ -14,7 +14,7 @@ en:
     admin_nav:
       name: "Foods and Drinks"
       home: "Home"
-      log_out: "Sign out"
+      log_out: "Log out"
       dashboard: "Dashboard"
       cate: "Categories"
       order: "Orders"
@@ -77,11 +77,28 @@ en:
         address: "Address"
         delete: "Delete"
         confirm: "Are you sure?"
+        id: "ID"
   products:
     index:
       title: "Products"
       cart: "Add to Cart"
+      id: "ID"
+      name: "Name"
+      price: "Price"
+      quantity: "Quantity"
+      detail: "Detail"
+      rate: "Rate average"
+      category: "Category"
+      edit: "Edit"
+      delete: "Delete"
+      confirmdelete: "Delete?"
+    update:
+      update: "Updated!"
+      delete: "Delete successful!"
     product:
       cart: "Add to Cart"
     show:
       cart: "Add to Cart"
+    edit:
+      title: "Edit Product"
+      update: "Update"

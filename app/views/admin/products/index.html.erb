@@ -1,0 +1,30 @@
+<table class="table table-hover">
+  <tr class="table-secondary">
+    <th><%= t ".id" %></th>
+    <th><%= t ".name" %></th>
+    <th><%= t ".price" %></th>
+    <th><%= t ".quantity" %></th>
+    <th><%= t ".detail" %></th>
+    <th><%= t ".rate" %></th>
+    <th><%= t ".category" %></th>
+    <th><%= t ".edit" %></th>
+    <th><%= t ".delete" %></th>
+  </tr>
+  <% @products.each do |p| %>
+    <tr>
+      <td><%= p.id %></td>
+      <td><%= p.name %></td>
+      <td>$<%= p.price %></td>
+      <td><%= p.quantity %></td>
+      <td><%= p.detail %></td>
+      <td><%= p.rate_average %></td>
+      <td><%= p.category.name %></td>
+      <td><%= link_to t(".edit"), edit_admin_product_path(p) %></td>
+      <td><%= link_to t(".delete"), admin_product_path(p),
+        method: :delete, data: {confirm: t(".confirmdelete")} %></td>
+    </tr>
+  <% end %>
+</table>
+<div class="pagination justify-content-center">
+  <%= paginate @products, theme: "google" %>
+</div>
