@@ -15,7 +15,7 @@
         <!-- categories dropdown -->
         
         <div class="nav-item dropdown">
-          <%= link_to t(".categories"), categories_path,
+          <%= link_to t(".categories"), "#",
             class: "nav-link dropdown-toggle" %>
             <ul class="dropdown-menu">
               <% @categories.each do |category| %>
@@ -41,13 +41,22 @@
               aria: {haspopup: "true", expanded: "false"} %>
           <!-- items -->
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <%= link_to t(".cart"), cart_path(@current_user),
-              class: "dropdown-item" %>
-            <%= link_to @current_user.name,
-              account_user_path(@current_user), class: "dropdown-item" %>
-            <div class="dropdown-divider"></div>
-            <%= link_to t(".logout"), account_session_path(@current_user),
-                    method: :delete, class: "dropdown-item" %>
+            <% if current_user.admin? == false %>
+              <%= link_to t(".cart"), cart_path(@current_user),
+                class: "dropdown-item" %>           
+              <%= link_to @current_user.name,
+                account_user_path(@current_user), class: "dropdown-item" %>
+              <div class="dropdown-divider"></div>
+              <%= link_to t(".logout"), account_session_path(@current_user),
+                method: :delete, class: "dropdown-item" %>
+            <% else %>           
+              <%= link_to @current_user.name,
+                account_user_path(@current_user), class: "dropdown-item" %>
+              <div class="dropdown-divider"></div>
+              <%= link_to  "Dashboard", admin_products_path, class: "dropdown-item" %>
+              <%= link_to t(".logout"), account_session_path(@current_user),
+                method: :delete, class: "dropdown-item" %>
+            <% end %>
           </div>
         </li>
         <% else %>

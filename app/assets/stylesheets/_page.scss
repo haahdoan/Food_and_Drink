@@ -12,6 +12,31 @@ body {
 
 .home {
   background-color: $light_brown;
+
+  .pagination {
+    .page-item.active .page-link {
+      color: $white_pink;
+      background-color: $brown;
+      border-color: $white_pink;
+    }
+    
+    .page-link {
+      border: 1px solid $brown;
+      background-color: $brown;
+    }
+    
+    .page-link:hover {
+      background-color:$light_brown;
+    }
+  
+    a {
+      color: $white_pink;
+    }
+  
+    a:hover {
+      color: $white;
+    }
+  }
 }
 
 .dropup {
@@ -40,31 +65,6 @@ body {
 .btn-outline-success {
   color: $white_pink;
   border-color: $light_brown;
-}
-
-.pagination {
-  .page-item.active .page-link {
-    color: $white_pink;
-    background-color: $brown;
-    border-color: $white_pink;
-  }
-  
-  .page-link {
-    border: 1px solid $brown;
-    background-color: $brown;
-  }
-  
-  .page-link:hover {
-    background-color:$light_brown;
-  }
-
-  a {
-    color: $white_pink;
-  }
-
-  a:hover {
-    color: $white;
-  }
 }
 
 input, textarea, select, .uneditable-input {
@@ -114,4 +114,10 @@ aside {
 
 #nganluong {
   display: none;
+}
+
+.product_table { 
+  .btn.btn-primary {
+    float: right;
+  }
 }

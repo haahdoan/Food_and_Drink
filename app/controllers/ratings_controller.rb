@@ -3,8 +3,8 @@ class RatingsController < ApplicationController
   before_action :load_product
 
   def create
-    return flash[:danger] = t(".had_rate") if @product.rated_by?(current_user)
-    return flash[:danger] = t(".no_star") if params[:rating][:value].nil?
+    return flash[:danger] = t(:had_rate) if @product.rated_by?(current_user)
+    return flash[:danger] = t(:no_star) if params[:rating][:value].nil?
     @product.rate(params[:rating][:value], current_user)
 
     if @product.save
