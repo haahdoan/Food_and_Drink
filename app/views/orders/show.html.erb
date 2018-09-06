@@ -10,7 +10,7 @@
   </tr>
   <% @order.each do |o| %>
     <tr>
-      <td><%= o.created_at.strftime("%c %r") %></td>
+      <td><%= o.created_at.strftime("%d/%m/%Y at %I:%M %p") %></td>
       <td><%= o.delivery %></td>
       <td><%= o.payment %></td>
       <td><%= link_to t(".detail"), product_order_path(o) %></td>

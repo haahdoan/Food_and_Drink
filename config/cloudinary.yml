@@ -1,0 +1,13 @@
+development:
+  cloud_name: "foodanddrink"
+  api_key: "423699729239387"
+  api_secret: "UKfYXoQHEX78E15Q6JMjqjevo9U"
+  secure: true
+  cdn_subdomain: true
+
+production:
+  cloud_name: "foodanddrink"
+  api_key: "423699729239387"
+  api_secret: "UKfYXoQHEX78E15Q6JMjqjevo9U"
+  secure: true
+  cdn_subdomain: true

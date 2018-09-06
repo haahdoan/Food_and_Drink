@@ -34,7 +34,8 @@ module Admin
         flash[:success] = t ".update"
         redirect_to_back
       else
-        render :edit
+        # render :edit
+        redirect_to edit_admin_product_path @product
       end
     end
 

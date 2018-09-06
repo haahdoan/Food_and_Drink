@@ -22,7 +22,7 @@
           <%= link_to cart.product.name, product_path(cart.product) %>
         </td>
         <td>
-          $<%= cart.product.price %>
+          <%= cart.product.price %> VND
         </td>
         <%= form_for :cart, url: cart_path(cart), method: :patch do |f| %>
           <% if cart.product.quantity == 0 %>
@@ -80,7 +80,7 @@
     <td></td>
     <td></td>
     <td></td>
-    <td><strong>$<%= @total_price %></strong></td>
+    <td><strong><%= @total_price %> VND</strong></td>
   </tr>
   <tr>
     <td><%= link_to t(".history"), order_path(current_user) %></td>

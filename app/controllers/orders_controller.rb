@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   before_action :check_login
   before_action :find_order, only: [:create, :destroy]
+  before_action :remove_order, only: :show
 
   def new
     @order = Order.create! user: current_user
@@ -44,5 +45,9 @@ class OrdersController < ApplicationController
 
   def find_order
     @order = Order.find_by id: params[:id]
+  end
+
+  def remove_order
+    Order.status.destroy_all
   end
 end

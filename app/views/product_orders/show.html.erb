@@ -16,7 +16,7 @@
         <% end %>
       </td>
       <td><%= link_to po.product.name, product_path(po.product) %></td>
-      <td>$<%= po.product.price %></td>
+      <td><%= po.product.price %> VND</td>
       <td><%= po.quantity %></td>
     </tr>
   <% end %>
@@ -24,7 +24,7 @@
     <td><strong><%= t ".total" %></strong></td>
     <td></td>
     <td></td>
-    <td><strong>$<%= @total_price %></strong></td>
+    <td><strong><%= @total_price %> VND</strong></td>
   </tr>
   <tr>
     <td><%= link_to t(".history"), order_path(current_user) %></td>
